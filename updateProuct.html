@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>PRODUCT SIMULATION</title>
+</head>
+<body>
+<div align="center">
+  <h1 style="color:red">PRODUCT SIMULATION</h1>
+
+
+  <div class="col-4">
+
+    <form th:action="@{/updateProduct}" method="get" th:object="${tempProduct}">
+      <input type="number" class="form-control" placeholder="Enter Id" th:field="*{productId}"><br><br>
+      <input type="text" class="form-control" placeholder="Enter User Name" th:field="*{productName}"><br><br>
+      <input type="text" class="form-control" placeholder="Enter email id" th:field="*{productPerUnitPrice}"><br><br>
+      <input type="tel" class="form-control" placeholder="Enter Contact no" th:field="*{productQty}"><br><br>
+      <input type="submit" value="UPDATE PRODUCT" class="btn btn-success">
+    </form>
+  </div>
+</div>
+</body>
+</html>
